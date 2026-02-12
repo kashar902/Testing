@@ -4,7 +4,7 @@ using BloodConnect.Infrastructure.Data;
 using BloodConnect.Infrastructure.Repositories;
 using BloodConnect.Infrastructure.Seeds;
 using BloodConnect.Services.Services;
-using BloodConnect.API.Middleware;
+using BloodConnectApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -70,6 +70,54 @@ builder.Services.AddScoped<IDeferralReasonService, DeferralReasonService>();
 
 var app = builder.Build();
 
+// Initialize database and apply migrations
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<BloodConnectDbContext>();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    try
+    {
+        var pendingMigrations = await dbContext.Database.GetPendingMigrationsAsync();
+
+        if (pendingMigrations.Any())
+        {
+            logger.LogInformation("Found {PendingMigrationCount} pending migration(s). " +
+                                  "Applying migrations...", pendingMigrations.Count());
+
+            // Apply pending migrations asynchronously
+            await dbContext.Database.MigrateAsync();
+            
+            logger.LogInformation("\n" +
+              "╔══════════════════════════════════════════════════════╗\n" +
+              "║            DATABASE MIGRATION COMPLETE               ║\n" +
+              "╚══════════════════════════════════════════════════════╝\n");
+        }
+        else
+        {
+            logger.LogInformation("\n" +
+              "╔══════════════════════════════════════════════════════╗\n" +
+              "║            NO PENDING MIGRATIONS FOUND               ║\n" +
+              "╚══════════════════════════════════════════════════════╝\n");
+        }
+    }
+    catch (Exception ex)
+    {
+        logger.LogCritical(ex, "\n" +
+            "╔══════════════════════════════════════════════════════════════════╗\n" +
+            "║  ❌ DATABASE CONNECTION FAILED                                   ║\n" +
+            "╠══════════════════════════════════════════════════════════════════╣\n" +
+            "║  The application cannot start without a database connection.     ║\n" +
+            "║                                                                  ║\n" +
+            "║  To start the database:                                          ║\n" +
+            "║    make db-up                                                    ║\n" +
+            "║                                                                  ║\n" +
+            "║  Or configure a connection string in appsettings.Development.json║\n" +
+            "╚══════════════════════════════════════════════════════════════════╝");
+        
+        // Always fail startup if database is not available
+        throw new InvalidOperationException("Database connection required. See logs for details.", ex);
+    }
+}
 // Seed database
 using (var scope = app.Services.CreateScope())
 {

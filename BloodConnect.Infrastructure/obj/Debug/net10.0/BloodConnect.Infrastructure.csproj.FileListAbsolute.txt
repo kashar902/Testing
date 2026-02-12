@@ -15,3 +15,4 @@ D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net1
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.pdb
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.genruntimeconfig.cache
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\ref\BloodConnect.Infrastructure.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.sourcelink.json

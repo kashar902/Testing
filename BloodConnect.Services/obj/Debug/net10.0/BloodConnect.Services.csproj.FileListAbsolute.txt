@@ -15,3 +15,4 @@ D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\Bl
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\refint\BloodConnect.Services.dll
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.pdb
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\ref\BloodConnect.Services.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.sourcelink.json

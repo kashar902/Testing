@@ -15,12 +15,6 @@ public class DonorService : IDonorService
 
     public async Task<DonorResponse> CreateDonorAsync(CreateDonorRequest request)
     {
-        // Validate coupon code uniqueness
-        if (await _unitOfWork.Donors.ExistsByCouponCodeAsync(request.CouponCode))
-        {
-            throw new InvalidOperationException("This coupon code is already in use.");
-        }
-
         // Validate national ID uniqueness
         if (await _unitOfWork.Donors.ExistsByNationalIdAsync(request.NationalId))
         {
@@ -38,6 +32,9 @@ public class DonorService : IDonorService
         {
             throw new InvalidOperationException("A donor with matching phone and date of birth already exists.");
         }
+
+        // Auto-generate coupon code
+        var couponCode = await GetNextCouponCodeAsync();
 
         var now = DateTime.UtcNow;
         var donor = new Donor
@@ -57,7 +54,7 @@ public class DonorService : IDonorService
                 Country = request.Address.Country,
                 PostalCode = request.Address.PostalCode
             },
-            CouponCode = request.CouponCode.Trim().ToUpper(),
+            CouponCode = couponCode,
             CreatedAt = now,
             UpdatedAt = now
         };
@@ -136,6 +133,14 @@ public class DonorService : IDonorService
 
         var screenings = await _unitOfWork.Donors.GetDonorScreeningsAsync(id);
         return screenings.Select(MapScreeningToResponse);
+    }
+
+    public async Task<string> GetNextCouponCodeAsync()
+    {
+        var maxCouponCode = await _unitOfWork.Donors.GetMaxCouponCodeAsync();
+        var maxNumber = int.Parse(maxCouponCode);
+        var nextNumber = maxNumber + 1;
+        return nextNumber.ToString("D4");
     }
 
     private DonorResponse MapToResponse(Donor donor)

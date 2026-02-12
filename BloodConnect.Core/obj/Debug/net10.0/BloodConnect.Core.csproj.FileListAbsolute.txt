@@ -9,3 +9,4 @@ D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Core\obj\Debug\net10.0\BloodC
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Core\obj\Debug\net10.0\refint\BloodConnect.Core.dll
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Core\obj\Debug\net10.0\BloodConnect.Core.pdb
 D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Core\obj\Debug\net10.0\ref\BloodConnect.Core.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Core\obj\Debug\net10.0\BloodConnect.Core.sourcelink.json

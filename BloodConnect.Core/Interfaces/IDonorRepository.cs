@@ -9,5 +9,6 @@ public interface IDonorRepository : IRepository<Donor>
     Task<bool> ExistsByNationalIdAsync(string nationalId);
     Task<bool> ExistsByPhoneAndDobAsync(string phone, DateTime dob);
     Task<IEnumerable<DonationScreening>> GetDonorScreeningsAsync(Guid donorId);
+    Task<string> GetMaxCouponCodeAsync();
 }
 

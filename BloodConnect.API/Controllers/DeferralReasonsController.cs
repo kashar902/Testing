@@ -3,7 +3,7 @@ using BloodConnect.Services.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BloodConnect.API.Controllers;
+namespace BloodConnectApi.Controllers;
 
 [ApiController]
 [Route("api/deferral-reasons")]

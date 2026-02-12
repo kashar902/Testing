@@ -3,7 +3,7 @@ using BloodConnect.Services.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BloodConnect.API.Controllers;
+namespace BloodConnectApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -95,6 +95,14 @@ public class DonorsController : ControllerBase
         {
             return NotFound(new { error = ex.Message });
         }
+    }
+
+    [HttpGet("next-coupon")]
+    [AllowAnonymous]
+    public async Task<ActionResult<NextCouponCodeResponse>> GetNextCouponCode()
+    {
+        var couponCode = await _donorService.GetNextCouponCodeAsync();
+        return Ok(new NextCouponCodeResponse { CouponCode = couponCode });
     }
 }
 

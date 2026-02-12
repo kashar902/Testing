@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace BloodConnect.API.Middleware;
+namespace BloodConnectApi.Middleware;
 
 public class ExceptionHandlingMiddleware
 {

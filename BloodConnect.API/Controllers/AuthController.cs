@@ -2,7 +2,7 @@ using BloodConnect.Core.DTOs;
 using BloodConnect.Services.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BloodConnect.API.Controllers;
+namespace BloodConnectApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

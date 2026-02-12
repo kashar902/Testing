@@ -44,5 +44,31 @@ public class DonorRepository : Repository<Donor>, IDonorRepository
             .OrderByDescending(s => s.CreatedAt)
             .ToListAsync();
     }
+
+    public async Task<string> GetMaxCouponCodeAsync()
+    {
+        var allCoupons = await _dbSet
+            .Select(d => d.CouponCode)
+            .ToListAsync();
+
+        if (!allCoupons.Any())
+        {
+            return "0000";
+        }
+
+        // Filter numeric coupon codes and find the maximum
+        var numericCoupons = allCoupons
+            .Where(c => int.TryParse(c, out _))
+            .Select(c => int.Parse(c))
+            .ToList();
+
+        if (!numericCoupons.Any())
+        {
+            return "0000";
+        }
+
+        var maxCode = numericCoupons.Max();
+        return maxCode.ToString("D4");
+    }
 }
 
