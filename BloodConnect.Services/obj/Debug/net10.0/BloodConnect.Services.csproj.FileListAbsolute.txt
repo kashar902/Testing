@@ -1,0 +1,17 @@
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Services.deps.json
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Services.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Services.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Core.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Infrastructure.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Core.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\bin\Debug\net10.0\BloodConnect.Infrastructure.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.csproj.AssemblyReference.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.AssemblyInfoInputs.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.AssemblyInfo.cs
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.csproj.CoreCompileInputs.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodCon.32093E34.Up2Date
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\refint\BloodConnect.Services.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\BloodConnect.Services.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Services\obj\Debug\net10.0\ref\BloodConnect.Services.dll

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BloodConnect.API/BloodConnect.API.csproj" />
+  <Project Path="BloodConnect.Core/BloodConnect.Core.csproj" />
+  <Project Path="BloodConnect.Infrastructure/BloodConnect.Infrastructure.csproj" />
+  <Project Path="BloodConnect.Services/BloodConnect.Services.csproj" />
+</Solution>

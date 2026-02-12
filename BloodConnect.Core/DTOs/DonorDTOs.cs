@@ -1,0 +1,47 @@
+namespace BloodConnect.Core.DTOs;
+
+public class CreateDonorRequest
+{
+    public string FullName { get; set; } = string.Empty;
+    public string Dob { get; set; } = string.Empty; // ISO date string
+    public string Gender { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string NationalId { get; set; } = string.Empty;
+    public AddressDto Address { get; set; } = new();
+    public string CouponCode { get; set; } = string.Empty;
+}
+
+public class UpdateDonorRequest
+{
+    public string FullName { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public AddressDto Address { get; set; } = new();
+}
+
+public class DonorResponse
+{
+    public Guid DonorId { get; set; }
+    public string FullName { get; set; } = string.Empty;
+    public string Dob { get; set; } = string.Empty;
+    public string Gender { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string NationalId { get; set; } = string.Empty;
+    public AddressDto Address { get; set; } = new();
+    public string CouponCode { get; set; } = string.Empty;
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+    public string? LastDonationDate { get; set; }
+}
+
+public class AddressDto
+{
+    public string Line1 { get; set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
+    public string Province { get; set; } = string.Empty;
+    public string Country { get; set; } = string.Empty;
+    public string PostalCode { get; set; } = string.Empty;
+}
+

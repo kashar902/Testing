@@ -1,0 +1,17 @@
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Infrastructure.deps.json
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Infrastructure.runtimeconfig.json
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Infrastructure.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Infrastructure.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Core.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\bin\Debug\net10.0\BloodConnect.Core.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.csproj.AssemblyReference.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.AssemblyInfoInputs.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.AssemblyInfo.cs
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodCon.0038DB85.Up2Date
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\refint\BloodConnect.Infrastructure.dll
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.pdb
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\BloodConnect.Infrastructure.genruntimeconfig.cache
+D:\Sunbonn\blood-connect-repo\backend\BloodConnect.Infrastructure\obj\Debug\net10.0\ref\BloodConnect.Infrastructure.dll

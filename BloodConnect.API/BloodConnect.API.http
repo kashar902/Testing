@@ -1,0 +1,6 @@
+@BloodConnect.API_HostAddress = http://localhost:5028
+
+GET {{BloodConnect.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
