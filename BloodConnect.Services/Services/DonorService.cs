@@ -21,16 +21,10 @@ public class DonorService : IDonorService
             throw new InvalidOperationException("A donor with this National ID already exists.");
         }
 
-        // Parse DOB
-        if (!DateTime.TryParse(request.Dob, out var dob))
+        // Validate age
+        if (request.Age < 18 || request.Age > 100)
         {
-            throw new ArgumentException("Invalid date of birth format");
-        }
-
-        // Check for duplicate by phone and DOB
-        if (await _unitOfWork.Donors.ExistsByPhoneAndDobAsync(request.Phone, dob))
-        {
-            throw new InvalidOperationException("A donor with matching phone and date of birth already exists.");
+            throw new ArgumentException("Age must be between 18 and 100 years");
         }
 
         // Auto-generate coupon code
@@ -41,11 +35,14 @@ public class DonorService : IDonorService
         {
             DonorId = Guid.NewGuid(),
             FullName = request.FullName.Trim(),
-            DateOfBirth = dob,
+            FatherHusbandName = request.FatherHusbandName?.Trim(),
+            Age = request.Age,
             Gender = request.Gender.ToLower(),
+            BloodGroup = request.BloodGroup?.Trim(),
             Phone = request.Phone.Trim(),
             Email = request.Email.Trim(),
             NationalId = request.NationalId.Trim(),
+            District = request.District?.Trim(),
             Address = new Address
             {
                 Line1 = request.Address.Line1,
@@ -54,6 +51,8 @@ public class DonorService : IDonorService
                 Country = request.Address.Country,
                 PostalCode = request.Address.PostalCode
             },
+            TimesDonatedBefore = request.TimesDonatedBefore,
+            SourceOfInfo = request.SourceOfInfo?.Trim(),
             CouponCode = couponCode,
             CreatedAt = now,
             UpdatedAt = now
@@ -149,11 +148,14 @@ public class DonorService : IDonorService
         {
             DonorId = donor.DonorId,
             FullName = donor.FullName,
-            Dob = donor.DateOfBirth.ToString("yyyy-MM-dd"),
+            FatherHusbandName = donor.FatherHusbandName,
+            Age = donor.Age,
             Gender = donor.Gender,
+            BloodGroup = donor.BloodGroup,
             Phone = donor.Phone,
             Email = donor.Email,
             NationalId = donor.NationalId,
+            District = donor.District,
             Address = new AddressDto
             {
                 Line1 = donor.Address.Line1,
@@ -162,6 +164,8 @@ public class DonorService : IDonorService
                 Country = donor.Address.Country,
                 PostalCode = donor.Address.PostalCode
             },
+            TimesDonatedBefore = donor.TimesDonatedBefore,
+            SourceOfInfo = donor.SourceOfInfo,
             CouponCode = donor.CouponCode,
             CreatedAt = donor.CreatedAt,
             UpdatedAt = donor.UpdatedAt,

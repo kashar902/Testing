@@ -67,6 +67,7 @@ builder.Services.AddScoped<IDonorService, DonorService>();
 builder.Services.AddScoped<IScreeningService, ScreeningService>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<IDeferralReasonService, DeferralReasonService>();
+builder.Services.AddScoped<IPrinterService, PrinterService>();
 
 var app = builder.Build();
 
@@ -126,15 +127,12 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blood Connect API V1");
-        c.RoutePrefix = string.Empty; // Set Swagger UI at the root
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blood Connect API V1");
+    c.RoutePrefix = string.Empty; // Set Swagger UI at the root
+});
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 

@@ -31,8 +31,9 @@ public class DonorRepository : Repository<Donor>, IDonorRepository
 
     public async Task<bool> ExistsByPhoneAndDobAsync(string phone, DateTime dob)
     {
-        return await _dbSet
-            .AnyAsync(d => d.Phone == phone && d.DateOfBirth.Date == dob.Date);
+        // This method is deprecated - Age-based duplicate checking removed
+        // Keeping for backward compatibility but always returns false
+        return await Task.FromResult(false);
     }
 
     public async Task<IEnumerable<DonationScreening>> GetDonorScreeningsAsync(Guid donorId)

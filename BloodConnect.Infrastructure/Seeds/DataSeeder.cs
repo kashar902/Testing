@@ -121,7 +121,7 @@ public static class DataSeeder
                 {
                     DonorId = Guid.Parse("00000000-0000-0000-0002-000000000001"),
                     FullName = "Sarah Johnson",
-                    DateOfBirth = new DateTime(1990, 5, 15),
+                    Age = 35,
                     Gender = "female",
                     Phone = "+1-555-0101",
                     Email = "sarah.j@example.com",
@@ -143,7 +143,7 @@ public static class DataSeeder
                 {
                     DonorId = Guid.Parse("00000000-0000-0000-0002-000000000002"),
                     FullName = "Michael Chen",
-                    DateOfBirth = new DateTime(1985, 11, 22),
+                    Age = 40,
                     Gender = "male",
                     Phone = "+1-555-0202",
                     Email = "mchen@example.com",
